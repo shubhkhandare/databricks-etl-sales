@@ -11,6 +11,27 @@ Bronze, Silver, and Gold architecture.
 - Delta Lake
 - GitHub
 
+
+## Databricks Workflow
+
+Job Name: etl_sales_pipeline
+
+Task Order:
+1. bronze_ingestion
+2. silver_transform
+3. gold_daily_sales
+4. gold_customer_metrics
+5. gold_product_metrics
+
+Trigger:
+- Manual (can be scheduled daily)
+
+Cluster:
+- Single node (Databricks Free)
+
+
+
+
 ## Project Structure
 databricks-etl-sales/
 ├── notebooks/

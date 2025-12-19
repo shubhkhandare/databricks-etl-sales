@@ -30,25 +30,6 @@ Cluster:
 - Single node (Databricks Free)
 
 
-
-
-## Project Structure
-databricks-etl-sales/
-├── notebooks/
-│   ├── bronze_ingestion.py
-│   ├── silver_cleaning.py
-│   ├── gold_aggregation.sql
-│
-├── sql/
-│   └── exploratory_queries.sql
-│
-├── docs/
-│   └── README.md
-│
-└── README.md
-
-
-
 ## Layers Explained
 
 ### Bronze
@@ -60,6 +41,20 @@ Data cleaning, deduplication, and schema enforcement.
 ### Gold
 Aggregated tables for analytics and reporting.
 
-## Status
-🚧 In Progress – building step by step
+
+## Key Features
+- Bronze–Silver–Gold data modeling
+- Incremental processing using Delta Lake MERGE
+- SQL and PySpark transformations
+- Git-based notebook versioning
+- Production-style Databricks workflow
+
+## How to Run
+1. Clone the repository into Databricks Repos
+2. Configure Databricks Workflow tasks
+3. Run the workflow manually or schedule it
+
+
+
+
 

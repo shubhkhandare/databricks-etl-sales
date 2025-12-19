@@ -25,6 +25,8 @@ customer_df.display()
 
 # COMMAND ----------
 
+from pyspark.sql.functions import sum, count, avg
+
 customer_metrics_df = (
     customer_df
     .groupBy("customer_id")
@@ -34,7 +36,7 @@ customer_metrics_df = (
         avg("total_amount").alias("avg_order_value")
     )
 )
-
+display(customer_metrics_df)
 
 # COMMAND ----------
 
